@@ -91,3 +91,6 @@ function current_branch() {
 alias ggpull='git pull origin $(current_branch)'
 # compdef ggpull=git
 alias ggpush='git push origin $(current_branch)'
+
+source ~/.rvm/scripts/rvm
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
