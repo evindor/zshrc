@@ -58,22 +58,17 @@ hash -d itunes=/Volumes/Data\ HD/Music/iTunes\ Music/
 [ -r /etc/debian_version ] && [ -x 'which sudo' ] && alias upgrade='sudo apt-get update && sudo apt-get -u upgrade'
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/openssl/1.0.1c/bin:/usr/local/share/python:/usr/local/mysql/bin:/usr/local/share/npm/bin/:/usr/local/narwhal/bin:$PATH"
-export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 export ARCHFLAGS="-arch x86_64"
 
 # python
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-alias sshneutrino='ssh evindor@li347-90.members.linode.com'
-alias sshdev2='ssh evindor@dev2.ostrovok.ru'
-alias cdo='cd ~/ostrota'
-alias cde='cd ~/extrota'
+alias cde='cd ~/extrota && workon extrota'
 alias cdcs='cd ~/CodingStuff'
 alias mng='python manage.py'
 alias runs='python manage.py runserver'
 alias serv='python manage.py runserver 0.0.0.0:8000'
-alias woe='workon extrota'
 alias vimconf='vim ~/.vimrc'
 alias vi="open \"mvim://open?url=file://$1\""
 
@@ -94,6 +89,7 @@ alias ggpush='git push origin $(current_branch)'
 
 source ~/.rvm/scripts/rvm
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/usr/local/Cellar/ctags/5.8/bin
 
 #fix terminal locale
 export LC_CTYPE=en_US.UTF-8
